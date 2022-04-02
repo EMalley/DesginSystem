@@ -1,0 +1,118 @@
+/* ------------------------- */
+/* --------- CUSTOM PROPERTY -----------*/
+/* ------------------------- */
+:root {
+    --clr-dark: 230 35% 7%;
+    --clr-white: 231 77% 90%;
+    --clr-light: 0 0% 100%;
+}
+
+
+/* ------------------------- */
+/* --------- RESET -----------*/
+/* ------------------------- */
+
+/* Box Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* reset margins */
+body, h1, h2, h3, h4, h5, h6, p, figure, picture {
+    margin: 0;
+}
+
+/* Setting up the body */
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Images */
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Form Elements */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* remove animations for those who dont have them on */
+@media(prefers-reduced-motion:reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* --------------- */
+/* Utitily Classes */
+/* --------------- */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    padding-inline: 0 2em;
+    margin-inline: auto;
+    max-width: 80rem;
+}
+
+.sr-only {
+    /* For visually impared users and screen readers */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+.box {
+    background-color: lightblue;
+    padding: 3rem;
+    text-align: center;
+    justify-content: center;
+    gap: 2rem !important;
+}
+
+/* Color section */
+
+.bg-dark {
+    background: hsl(var(--clr-dark));
+}
+
+.bg-accent {
+    background: hsl(var(--clr-light));
+}
+
+.bg-white {
+    background: hsl(var(--clr-white));
+}
+
+.text-dark {
+    background: hsl(var(--clr-dark));
+}
+
+.text-accent {
+    background: hsl(var(--clr-light));
+}
+
+.text-white {
+    background: hsl(var(--clr-white));
+}
